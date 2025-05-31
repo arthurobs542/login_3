@@ -1,17 +1,18 @@
-let b7valilador = {
+let valilador = {
   handleSubmit: (event) => {
     event.preventDefault();
     let send = true;
 
     let inputs = form.querySelectorAll("input");
 
+    valilador.clearErrors();
+
     for (let i = 0; i < inputs.length; i++) {
       let input = inputs[i];
-      let check = b7valilador.checkIpunt(input);
+      let check = valilador.checkIpunt(input);
       if (check !== true) {
         send = false;
-        console.log(check);
-        //exibir erro
+        valilador.showError(input, check);
       }
     }
     //send = false;
@@ -34,14 +35,43 @@ let b7valilador = {
             break;
 
           case "min":
+            if (input.value.length < rDetails[1])
+              return (
+                "campo tem que ter pelo menos" + rDetails[1] + "caracteres "
+              );
+
             break;
         }
       }
     }
     return true;
   },
+  //função para mostrar o erro
+
+  showError: (input, error) => {
+    input.style.borderColor = "#FF0000";
+    let errorElement = document.createElement("div");
+    errorElement.classList.add("error");
+    errorElement.innerHTML = error;
+
+    input.parentElement.insertBefore(errorElement, input.ElementSibling);
+  },
+
+  //função para limpar o error
+
+  clearErrors: () => {
+    let inputs = form.querySelectorAll("input");
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].style = "";
+    }
+
+    let errorElements = document.querySelectorAll(".error");
+    for (let i = 0; i < errorElements.length; i++) {
+      errorElements[i].remove();
+    }
+  },
 };
 
-let form = document.querySelector(".b7valilador");
+let form = document.querySelector(".valilador");
 
-form.addEventListener("submit", b7valilador.handleSubmit);
+form.addEventListener("submit", valilador.handleSubmit);

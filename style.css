@@ -35,9 +35,20 @@ body {
   flex-direction: column;
 }
 
+.rightside label {
+  margin-bottom: 10px;
+}
 .rightside input {
   font-size: 1.5rem;
   display: block;
-  margin-bottom: 30px;
   width: 100%;
+  margin-bottom: 10px;
+}
+
+.error {
+  font-size: 11px;
+  background-color: rgba(255, 0, 0, 0.56);
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
 }
