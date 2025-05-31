@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #c79a57;
+}
+
+.screen {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.leftside {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftside img {
+  width: 90%;
+  height: auto;
+}
+
+.rightside {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  width: 500px;
+  background-color: #c79a57;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightside input {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+}
