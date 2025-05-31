@@ -3,15 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <title>login</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="screen">
@@ -21,24 +14,24 @@
 
       <div class="rightside">
         <h1>Crie uma conta</h1>
-        <form method="POST" action="cadastro.php" class="b7valilador">
+        <form method="POST" class="b7valilador">
           <label>
-            Digite seu nome:
+            Digite seu nome:<br />
             <input type="text" name="nome" data-rules="required" />
           </label>
           <label>
-            Digite seu Email:
-            <input type="text" name="email" id="" />
+            Digite seu Email:<br />
+            <input type="text" name="email" />
           </label>
           <label>
-            Digite sua senha:
-            <input type="password" name="nome" id="" />
+            Digite sua senha:<br />
+            <input type="password" name="nome" />
           </label>
           <label>
             <input type="submit" value="cadastre-se" />
           </label>
         </form>
-        <div>Já tem uma conta? <a href="#">faça login</a></div>
+        <div>Já tem uma conta? <a href="">faça login</a></div>
       </div>
     </div>
     <script src="script.js"></script>
